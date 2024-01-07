@@ -4,7 +4,7 @@ from time import sleep
 
 while True:
 
-    file = open("words-all.txt")
+    file = open("dictionary.csv")
 
     all_words = file.readlines()
 
@@ -13,9 +13,9 @@ while True:
     notification.notify(
 
         title = "Vocabulary",
-        message = "Word : " + random_word[0] + "\nMeaning : " + random_word[1],
+        message = "Word : " + random_word[0] + "\nMeaning : " + random_word[2],
         app_icon = "dictionary.ico",
         timeout = 10
     )
 
-    sleep(7200)
+    sleep(10)
