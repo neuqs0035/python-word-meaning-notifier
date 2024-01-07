@@ -1,17 +1,21 @@
 from plyer import notification
 from random import choice
-import requests
+from time import sleep
 
-file = open("words-all.txt")
+while True:
 
-all_words = file.readlines()
+    file = open("words-all.txt")
 
-random_word = choice(all_words).split(",")
+    all_words = file.readlines()
 
-notification.notify(
+    random_word = choice(all_words).split(",")
 
-    title = "Vocabulary",
-    message = "Word : " + random_word[0] + "\nMeaning : " + random_word[1],
-    app_icon = "dictionary.ico",
-    timeout = 10
-)
+    notification.notify(
+
+        title = "Vocabulary",
+        message = "Word : " + random_word[0] + "\nMeaning : " + random_word[1],
+        app_icon = "dictionary.ico",
+        timeout = 10
+    )
+
+    sleep(7200)
