@@ -12,5 +12,6 @@ notification.notify(
 
     title = "Vocabulary",
     message = "Word : " + random_word[0] + "\nMeaning : " + random_word[1],
+    app_icon = "dictionary.ico",
     timeout = 10
 )
